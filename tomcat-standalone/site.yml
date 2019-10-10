@@ -1,10 +1,11 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- hosts: tomcat-servers
-  remote_user: root
+- hosts: localhost
+  connection: local
+  become_user: "{{ local_user | default('awx') }}"
   become: yes
-  become_method: sudo
+
 
   roles:
     - selinux
