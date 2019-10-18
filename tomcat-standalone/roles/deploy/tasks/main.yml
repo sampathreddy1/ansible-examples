@@ -2,9 +2,8 @@
 
 - name: Download Application from nexus
   get_url:
-  force: yes
-  url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
-  dest: /tmp/
+    url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
+    dest: /tmp/
         #- tasks:
         #  - name: Download WAR to server
         #    synchronize: src={{ warLocalPath }}/{{ warName }} dest={{ warRemotePath }}/{{ warName }}
