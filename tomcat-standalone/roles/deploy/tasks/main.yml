@@ -1,11 +1,10 @@
 ---
 
 - name: Download Application from nexus
-  tasks:
-    - get_url:
-        force: yes
-        url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
-        dest: /tmp/
+  get_url:
+  force: yes
+  url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
+  dest: /tmp/
     - stat:
         path: "/tmp/"
         #- tasks:
