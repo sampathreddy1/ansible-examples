@@ -7,6 +7,4 @@
 
 
   roles:
-    - selinux
-    - tomcat
     - deploy
