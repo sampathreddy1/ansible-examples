@@ -8,9 +8,6 @@
   copy:
     src: /tmp/embeddedTomcatSample-1.0.jar
     dest: /usr/share/tomcat/webapps
-    owner: tomcat
-    group: tomcat
-    mode: '0644'
 
         #- tasks:
         #  - name: Download WAR to server
