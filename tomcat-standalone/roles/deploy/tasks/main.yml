@@ -5,9 +5,7 @@
     url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
     dest: /tmp/
 - name: Copy file with owner and permissions
-  copy:
-    src: /tmp/embeddedTomcatSample-1.0.jar
-    dest: /usr/share/tomcat/webapps
+  copy: src: /tmp/embeddedTomcatSample-1.0.jar dest: /usr/share/tomcat/webapps
 
         #- tasks:
         #  - name: Download WAR to server
