@@ -4,6 +4,14 @@
   get_url:
     url: http://192.168.56.42:8081/repository/artifact/test/embeddedTomcatSample/1.0/embeddedTomcatSample-1.0.jar
     dest: /tmp/
+- name: Copy file with owner and permissions
+  copy:
+    src: /tmp/embeddedTomcatSample-1.0.jar
+    dest: /usr/share/tomcat/webapps
+    owner: tomcat
+    group: tomcat
+    mode: '0644'
+
         #- tasks:
         #  - name: Download WAR to server
         #    synchronize: src={{ warLocalPath }}/{{ warName }} dest={{ warRemotePath }}/{{ warName }}
