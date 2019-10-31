@@ -1,7 +1,7 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- hosts: tomcat-servers
+- hosts: tomcat servers
   become_user: root
   become: yes
 
